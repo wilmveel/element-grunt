@@ -22,58 +22,50 @@ module.exports = function(grunt) {
 
 	grunt.registerMultiTask('element_builder', 'Plugin to convert ui definitions in json to html', function() {
 
-	var done = this.async();
-  
-    // Merge task-specific and/or target-specific options with these defaults.
-    options = this.options({
-    });
-
-	// Iterate over all specified file groups.
-	this.files.forEach(function(f) {
-
-		// Concat banner + specified files + footer.
-		var src = f.src.filter(function(filepath) {
-			// Warn on and remove invalid source files (if nonull was set).
-			if (!grunt.file.exists(filepath)) {
-				grunt.log.warn('Source file "' + filepath + '" not found.');
-				return false;
-			} else {
-				grunt.log.writeln('Source file "' + filepath + '" found.');
-
-				var elements = grunt.file.readJSON(filepath);			
-				async.map(elements, function(item, callback){
-				loadElement (item, callback);
-			}, function(err, result){
-
-				var html = "";
-				result.forEach(function(item){
-				html += item;
-			});
-
-			console.log("Html" + html);
-			
-			fs.writeFile("test", html, function(err) {
-				if(err) {
-					console.log(err);
-				} else {
-					console.log("The file was saved!");
-				}
-			}); 
+		var done = this.async();
+	  
+		// Merge task-specific and/or target-specific options with these defaults.
+		options = this.options({
 		});
 
-		// get template
-		return true;
-		}
-	});
+		// Iterate over all specified file groups.
+		this.files.forEach(function(f) {
 
-      // Print a success message.
-      grunt.log.writeln('File "' + f + '" created.');
-    });
-	
-	grunt.log.writeln('Hallo Willem. ');
-  });
-  	
-	
+			// Concat banner + specified files + footer.
+			var src = f.src.filter(function(filepath) {
+				// Warn on and remove invalid source files (if nonull was set).
+				if (!grunt.file.exists(filepath)) {
+					grunt.log.warn('Source file "' + filepath + '" not found.');
+					return false;
+				} else {
+					grunt.log.writeln('Source file "' + filepath + '" found.');
+
+					var elements = grunt.file.readJSON(filepath);			
+					async.map(elements, function(item, callback){
+						loadElement (item, callback);
+					}, function(err, result){
+
+						var html = "";
+						result.forEach(function(item){
+							html += item;
+						});
+
+						console.log("Html" + html);
+						
+						fs.writeFile("partials/test.html", html, function(err) {
+							if(err) {
+								console.log(err);
+							} else {
+								console.log("The file was saved!");
+							}
+						}); 
+					});
+				}
+			});
+		});
+	});
+		
+		
 	function loadElement (element, callback){
 		
 		// Build url base on options

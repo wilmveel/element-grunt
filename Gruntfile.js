@@ -1,6 +1,6 @@
 /*
  * element-builder
- * https://github.com/wilmveel/grunt-element-builder
+ * https://github.com/wilmveel/element-grunt
  *
  * Copyright (c) 2013 Willem Veelenturf
  * Licensed under the MIT license.

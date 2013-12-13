@@ -1,8 +1,8 @@
 {
   "name": "element-builder",
   "description": "Plugin to convert ui definitions in json to html",
-  "version": "0.1.0",
-  "homepage": "https://github.com/wilmveel/grunt-element-builder",
+  "version": "0.1.2",
+  "homepage": "https://github.com/wilmveel/element-grunt",
   "author": {
     "name": "Willem Veelenturf",
     "email": "willem.veelenturf@gmail.com",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/wilmveel/grunt-element-builder"
+    "url": "git://github.com/wilmveel/element-grunt"
   },
   "bugs": {
-    "url": "https://github.com/wilmveel/grunt-element-builder/issues"
+    "url": "https://github.com/wilmveel/element-grunt/issues"
   },
   "licenses": [
     {

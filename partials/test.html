@@ -1,0 +1,89 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Persoonsgegevens</div>
+  <div class="panel-body">
+    <ng-form id="11" role="form" class="form-horizontal" name="form">
+	<div class="form-group">
+	<label for="111" class="col-sm-4 control-label">Voorletter(s)</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Initiales" class="form-control" placeholder="Voorletter(s)" ng-model="data.initiales" required="required" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="112" class="col-sm-4 control-label">Roepnaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Callname" class="form-control" placeholder="Roepnaam" ng-model="data.callname" ng-minlength="3" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="113" class="col-sm-4 control-label">Voornaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input" class="form-control" placeholder="Voornaam" ng-model="data.firstname" ng-maxlength="6" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="114" class="col-sm-4 control-label">Tussenvoegsel(s)</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Prefix" class="form-control" placeholder="Tussenvoegsel(s)" ng-model="data.prefix" element-validate="element-validate" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="115" class="col-sm-4 control-label">Achternaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Lastname" class="form-control" placeholder="Achternaam" ng-model="data.lastname" element-validate="element-validate" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text">Dit is de achternaam zoals vermed in pasport, identiteitskaar of rijbewijs</div>
+	</div>
+</div><div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8">
+      <button id="116" type="submit" class="btn btn-{{color}}" ng-click="test()"><span class="glyphicon {{data.icon}}" ng-show="icon"></span>Test</button>
+    </div>
+</div></ng-form></div>
+</div><div class="panel panel-default">
+  <div class="panel-heading">Persoonsgegevens</div>
+  <div class="panel-body">
+    <ng-form id="11" role="form" class="form-horizontal" name="form">
+	<div class="form-group">
+	<label for="111" class="col-sm-4 control-label">Voorletter(s)</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Initiales" class="form-control" placeholder="Voorletter(s)" ng-model="data.initiales" required="required" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="112" class="col-sm-4 control-label">Roepnaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Callname" class="form-control" placeholder="Roepnaam" ng-model="data.callname" ng-minlength="3" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="113" class="col-sm-4 control-label">Voornaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input" class="form-control" placeholder="Voornaam" ng-model="data.firstname" ng-maxlength="6" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="114" class="col-sm-4 control-label">Tussenvoegsel(s)</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Prefix" class="form-control" placeholder="Tussenvoegsel(s)" ng-model="data.prefix" element-validate="element-validate" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text"></div>
+	</div>
+</div><div class="form-group">
+	<label for="115" class="col-sm-4 control-label">Achternaam</label>
+	<div class="col-sm-8">
+		<input type="{{data.type}}" id="{{id}}" name="Input Lastname" class="form-control" placeholder="Achternaam" ng-model="data.lastname" element-validate="element-validate" />
+		<div class="error" ng-show="text">{{$error}}</div>
+		<div class="text" ng-show="data.text">Dit is de achternaam zoals vermed in pasport, identiteitskaar of rijbewijs</div>
+	</div>
+</div><div class="form-group">
+    <div class="col-sm-offset-4 col-sm-8">
+      <button id="116" type="submit" class="btn btn-{{color}}" ng-click="test()"><span class="glyphicon {{data.icon}}" ng-show="icon"></span>Test</button>
+    </div>
+</div></ng-form></div>
+</div>
